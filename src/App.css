@@ -1,3 +1,5 @@
 body{
+    font-size: 2rem;
+    text-transform: capitalize;
     background: rgb(167, 167, 167);
 }
