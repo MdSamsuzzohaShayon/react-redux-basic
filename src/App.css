@@ -1,7 +1,10 @@
+
 body{
     font-size: 2rem;
     text-transform: capitalize;
     /* background: rgb(167, 167, 167); */
-    color: black;
-    background: rgb(25, 25, 51);
+}
+.hd{
+    color: aliceblue;
+    background: rgb(15, 16, 49);
 }

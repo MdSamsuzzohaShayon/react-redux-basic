@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import Todos from './components/Todos';
 import './App.css';
+import {Header, Segment} from 'semantic-ui-react';
 
 
 class App extends Component {
@@ -10,11 +12,25 @@ class App extends Component {
 
     ]
   }
+
+
+  deleteTodo =(id)=>{
+    console.log(id);
+    const todos = this.state.todos.filter(todo=>{
+      return todo.id !== id   
+    });
+    this.setState({
+      todos:todos
+    });
+  }
   render() {
     return (
-      <div>
-        hi
-      </div>
+      <React.Fragment>
+        <Segment>
+          <Header as="h1" textAlign="center">Todos</Header>
+        </Segment>
+        <Todos todos={this.state.todos} deleteTodo={this.deleteTodo} />
+      </React.Fragment>
     )
   }
 }
