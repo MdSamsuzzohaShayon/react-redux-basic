@@ -7,3 +7,8 @@ install react router
 and import
 
 [Higher Order Component](https://reactjs.org/docs/higher-order-components.html)
+
+
+[Getting dummy data from rest api using axios](https://jsonplaceholder.typicode.com/)
+
+install  axios ```npm install axios```

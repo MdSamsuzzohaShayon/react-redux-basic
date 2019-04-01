@@ -15,9 +15,9 @@ import {Link, NavLink, withRouter} from 'react-router-dom'; // this prevent the 
 const Navbar = (props) => {
     // console.log(props); // OUTPUT EMPTY OBJECT BECAUSE OF NAVBAR IS NOT IN ROUTE SO IT DOESN'T RECIVE THOSE PROPS BY DEFAULT
     // BECAUSE OF WITH ROUTER WE CAN ADD THOSE DEFAULT PROPS
-    setTimeout(()=>{
-        props.history.push('/about');
-    },2000);
+    // setTimeout(()=>{
+    //     props.history.push('/about');
+    // },2000);
     return (
         <Menu inverted color="green">
             <Menu.Item name='home' ><Link to='/'>Home</Link></Menu.Item>
