@@ -2,7 +2,7 @@ import React from 'react';
 import { Menu } from 'semantic-ui-react';
 
 // IT DIDN'T REFRESH THE PAGE OF REQUEST TO SERVER  
-import {Link, NavLink} from 'react-router-dom'; // this prevent the default action of request to server
+import {Link, NavLink, withRouter} from 'react-router-dom'; // this prevent the default action of request to server
 // NAVLINK WORK AS SAME WITH LINK BUT IT ADD AN EXTRA CLASS OF ACTIVE
 //  INSPECT ELEMENT TO SEE THAT
 
@@ -13,10 +13,11 @@ import {Link, NavLink} from 'react-router-dom'; // this prevent the default acti
 
 
 const Navbar = (props) => {
-    console.log(props); // OUTPUT EMPTY OBJECT BECAUSE OF NAVBAR IS NOT IN ROUTE SO IT DOESN'T RECIVE THOSE PROPS BY DEFAULT
-    // setTimeout(()=>{
-    //     props.history.push('/about');
-    // },500);
+    // console.log(props); // OUTPUT EMPTY OBJECT BECAUSE OF NAVBAR IS NOT IN ROUTE SO IT DOESN'T RECIVE THOSE PROPS BY DEFAULT
+    // BECAUSE OF WITH ROUTER WE CAN ADD THOSE DEFAULT PROPS
+    setTimeout(()=>{
+        props.history.push('/about');
+    },2000);
     return (
         <Menu inverted color="green">
             <Menu.Item name='home' ><Link to='/'>Home</Link></Menu.Item>
@@ -27,4 +28,4 @@ const Navbar = (props) => {
     )
 }
 
-export default Navbar;
+export default withRouter(Navbar);
