@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Todos from './components/Todos';
 import './App.css';
 import {Header, Segment} from 'semantic-ui-react';
+import AddForm from './components/AddForm';
 
 
 class App extends Component {
@@ -20,16 +21,28 @@ class App extends Component {
       return todo.id !== id   
     });
     this.setState({
-      todos:todos
+      todos
     });
   }
+
+
+  addForm = (todo)=>{
+   todo.id = Math.random();
+   let todos = [...this.state.todos, todo];
+   this.setState({
+     todos
+   })
+  };
   render() {
     return (
       <React.Fragment>
-        <Segment>
-          <Header as="h1" textAlign="center">Todos</Header>
+        <Segment style={{background:'purple'}} color="yellow">
+          <Header as="h1" textAlign="center" >Todos</Header>
         </Segment>
         <Todos todos={this.state.todos} deleteTodo={this.deleteTodo} />
+        <br/>
+        <br/>
+        <AddForm addForm={this.addForm} />
       </React.Fragment>
     )
   }
