@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Header, Segment } from 'semantic-ui-react';
+import Rainbow from './hoc/Rainbow';
 
 const About = () => {
     return (
@@ -12,4 +13,4 @@ const About = () => {
     )
 }
 
-export default About;
+export default Rainbow(About);
