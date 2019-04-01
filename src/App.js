@@ -14,6 +14,7 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <Navbar />
+          {/* exact means this will not effect on any other routes */}
           <Route exact path='/' component={Home} />
           <Route path='/about' component={About} />
           <Route path='/contract' component={Contract} />
