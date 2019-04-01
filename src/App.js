@@ -3,7 +3,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Contract from './components/Contract';
 import Navbar from './components/Navbar';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Post from './components/Post';
 
 
@@ -15,11 +15,14 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <Navbar />
-          {/* exact means this will not effect on any other routes */}
-          <Route exact path='/' component={Home} />
-          <Route path='/about' component={About} />
-          <Route path='/contract' component={Contract} />
-          <Route path="/posts/:post_id" component={Post} />
+          {/* SWITH WILL HELP TO USE ONLY ONE ROUTE AT A TIME  */}
+          <Switch>
+            {/* exact means this will not effect on any other routes */}
+            <Route exact path='/' component={Home} />
+            <Route path='/about' component={About} />
+            <Route path='/contract' component={Contract} />
+            <Route path="/:post_id" component={Post} />
+          </Switch>
         </div>
       </BrowserRouter>
     )

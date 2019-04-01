@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container, Header, Segment } from 'semantic-ui-react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import Pokeball from '../pokeball.png';
 
 class Home extends Component {
     state = {
@@ -33,8 +34,9 @@ class Home extends Component {
             posts.map(post => {
                 return (
                     <Segment key={post.id}>
+                    <img width="120px" src={Pokeball} alt="Image"/>
                         <Header>
-                            <Link to={'/posts/' + post.id}>
+                            <Link to={'/' + post.id}>
                                 {post.title}
                             </Link>
                         </Header>
