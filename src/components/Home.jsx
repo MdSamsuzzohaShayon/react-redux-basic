@@ -34,7 +34,7 @@ class Home extends Component {
                 return (
                     <Segment key={post.id}>
                         <Header>
-                            <Link to={'/' + post.id}>
+                            <Link to={'/posts/' + post.id}>
                                 {post.title}
                             </Link>
                         </Header>
