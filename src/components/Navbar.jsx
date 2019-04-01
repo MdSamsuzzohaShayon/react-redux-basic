@@ -8,7 +8,15 @@ import {Link, NavLink} from 'react-router-dom'; // this prevent the default acti
 
 
 
-const Navbar = () => {
+
+
+
+
+const Navbar = (props) => {
+    console.log(props); // OUTPUT EMPTY OBJECT BECAUSE OF NAVBAR IS NOT IN ROUTE SO IT DOESN'T RECIVE THOSE PROPS BY DEFAULT
+    // setTimeout(()=>{
+    //     props.history.push('/about');
+    // },500);
     return (
         <Menu inverted color="green">
             <Menu.Item name='home' ><Link to='/'>Home</Link></Menu.Item>
