@@ -4,6 +4,7 @@ import About from './components/About';
 import Contract from './components/Contract';
 import Navbar from './components/Navbar';
 import { BrowserRouter, Route } from 'react-router-dom';
+import Post from './components/Post';
 
 
 
@@ -18,6 +19,7 @@ class App extends Component {
           <Route exact path='/' component={Home} />
           <Route path='/about' component={About} />
           <Route path='/contract' component={Contract} />
+          <Route path="/:post_id" component={Post} />
         </div>
       </BrowserRouter>
     )
