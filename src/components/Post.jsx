@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container, Segment, Header, Message } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { Button } from 'semantic-ui-react';
+import { deletePost } from '../actions/postAction';
 
 
 
@@ -51,7 +52,10 @@ const mapDispatchToProps = (dispatch) => {
     return {
         // MAP A FUNCTION AND DISPATCH AN ACTION
         // THIS FUNCTION IS GOING TO ATTACHED TO OUR PROPS SO WE CAN USE INSIDE COMPONENT
-        deletePost: (id) => { dispatch({ type: 'DELETE_POST', id: id }) }
+        // deletePost: (id) => { dispatch({ type: 'DELETE_POST', id: id }) }
+
+        //USING ACTION FROM DEFFERENT FILES
+        deletePost: (id) => { dispatch(deletePost(id)) }
     }
 }
 
