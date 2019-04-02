@@ -1,27 +1,18 @@
 import React, { Component } from 'react';
 import { Container, Segment, Header, Message } from 'semantic-ui-react';
-import axios from 'axios';
-class Post extends Component {
-    state = {
-        post: null
-    }
-    componentDidMount(){
-        // console.log(this.props);
-        let id = this.props.match.params.post_id;
-        axios.get('https://jsonplaceholder.typicode.com/posts/'+id)
-            .then(res=>{
-                this.setState({
-                    post:res.data
-                });
-                // console.log(res);
-            });
-    }
-    render() {
-        const post = this.state.post ? (
-            <Segment>
-                <Header>{this.state.post.title}</Header>
-                <Message>{this.state.post.body}</Message>
+import {connect} from 'react-redux';
 
+
+
+
+
+class Post extends Component {
+
+    render() {
+        const post = this.props.post ? (
+            <Segment>
+                <Header>{this.props.post.title}</Header>
+                <Message>{this.props.post.body}</Message>
             </Segment>
         ) : (<Segment> Loading Post..... </Segment>) ;
 
@@ -34,4 +25,15 @@ class Post extends Component {
     }
 }
 
-export default Post;
+
+const mapStateToProps=(state, ownProps)=>{
+    let id = ownProps.match.params.post_id;
+
+    //INSIDE TERURN WHAT WE WANT TO APPLY TO OUR PROPS FOR THIS COMPONENT
+    // AND WE WANT AN INDIVIDUAL POST HERE
+    return {
+        post: state.posts.find(post =>post.id === id)
+    }
+}
+
+export default connect(mapStateToProps)(Post);
