@@ -12,3 +12,10 @@ and import
 [Getting dummy data from rest api using axios](https://jsonplaceholder.typicode.com/)
 
 install  axios ```npm install axios```
+
+
+# Redux
+
+![basic understanding](/img/Screenshot_1.png)
+
+![WOrd flow](/img/Screenshot_3.png)
