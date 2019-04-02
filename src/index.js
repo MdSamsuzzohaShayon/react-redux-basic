@@ -5,14 +5,15 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'semantic-ui-css/semantic.min.css';
 import {createStore } from 'redux';
+import rootReducer from './reducers/rootReducer';
 
 // PROVIDER WILL SURROUND AND WRAP THE ROOT APP COMPONENT
 // WE WILL PASS STORE INTO PROVIDER SO STORE CAN INTRACT WITH REACT
 import {Provider} from 'react-redux'; 
 
 
-//CREATE STORE AND INVOKE FUNCTION
-const store = createStore();
+//CREATE STORE AND INVOKE FUNCTION THAT INTRACTS WITH REDUCERS
+const store = createStore(rootReducer);  
 
 ReactDOM.render(<Provider store={store}><App /></Provider> , document.getElementById('root'));
 

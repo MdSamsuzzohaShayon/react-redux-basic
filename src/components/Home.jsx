@@ -1,26 +1,13 @@
 import React, { Component } from 'react';
 import { Container, Header, Segment } from 'semantic-ui-react';
-import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Pokeball from '../pokeball.png';
+import { connect } from 'react-redux'; // THIS IS A ACTUALLY FUNCTION AND WE INVOKE THIS FUNCTION TO BRING BACK HIGHER ORDER FUNCTION
+
+
 
 class Home extends Component {
-    state = {
-        posts: []
-    }
 
-
-
-    componentDidMount() {
-        axios.get('https://jsonplaceholder.typicode.com/posts')
-            .then(res => {
-                console.log(res)
-                this.setState({
-                    //TAKING ONLY 10 POST FROM ALL
-                    posts: res.data.slice(0, 10)
-                });
-            });
-    }
 
 
 
@@ -29,7 +16,8 @@ class Home extends Component {
 
 
     render() {
-        const { posts } = this.state;
+        console.log(this.props);
+        const { posts } = this.props;
         const postList = posts.length ? (
             posts.map(post => {
                 return (
@@ -61,4 +49,13 @@ class Home extends Component {
     }
 }
 
-export default Home;
+//TAKING STATE FROM REDUX STORE AND MAKE IT PROPS
+const mapStateToProps=(state)=>{
+    return {
+        posts: state.posts
+    }
+}
+
+
+//CONNECTING REACT COMPONENT TO REDUX STORAGE
+export default connect(mapStateToProps)(Home);
