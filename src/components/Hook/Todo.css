@@ -1,0 +1,42 @@
+.app {
+  color: white;
+  background: #366436;
+  padding: 30px;
+  height: 100vh;
+}
+.app .todo-list {
+  text-align: center;
+  background: #125012;
+  border-radius: 4px;
+  padding: 5px;
+  max-width: 400px;
+}
+
+.todo {
+  background: #48a055;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+  padding: 3px 10px;
+  font-size: 12px;
+  margin-bottom: 6px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.todo .btn {
+  color: white;
+  background: #366436;
+  border: 1px solid #125012;
+}
+
+.input {
+  width: 98%;
+  background: #48a055;
+  border: none;
+  padding: 3px;
+}
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.596);
+}
+
+/*# sourceMappingURL=Todo.css.map */

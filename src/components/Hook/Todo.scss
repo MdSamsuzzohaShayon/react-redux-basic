@@ -1,0 +1,46 @@
+$fontColor: white;
+$appBg: rgb(54, 100, 54);
+$elementBg: rgb(18, 80, 18);
+$thirdBg: rgb(72, 160, 85);
+
+.app{
+    color: $fontColor;
+    background: $appBg;
+    padding: 30px;
+    height: 100vh;
+    .todo-list{
+        text-align: center;
+        background: $elementBg;
+        border-radius: 4px;
+        padding: 5px;
+        max-width: 400px;
+    }
+}
+
+.todo{
+    background: $thirdBg;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+    padding: 3px 10px;
+    font-size: 12px;
+    margin-bottom: 6px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .btn{
+        color: $fontColor;
+        background: $appBg;
+        border: 1px solid $elementBg;
+    }
+}
+
+.input{
+    width: 98%;
+    background: $thirdBg;
+    border: none;
+    padding: 3px;
+    &::placeholder{
+        color: rgba(255, 255, 255, 0.596);
+    }
+}
+
