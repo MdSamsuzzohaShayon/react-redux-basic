@@ -1,0 +1,99 @@
+*{
+    padding: 0;
+    margin: 0;
+    // text-align: left !important;
+}
+
+$menuBg : rgb(6, 89, 104);
+$fC-1: rgb(169, 242, 255);
+$cartBg: rgb(3, 52, 61);
+$descClr : rgb(26, 72, 80);
+
+@mixin fontStyle($fs){
+    font-size: $fs;
+    color: $fC-1;
+}
+
+@mixin flexProp(){
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
+}
+
+.Cart{
+    text-align: left;
+    .menu{
+        width: 100%;
+        height: 80px;
+        background: $menuBg;
+        .items{
+            width: 80%;
+            margin-left: 10%;
+            display: flex;
+            justify-content: space-between;
+            ul{
+                // display: inline-block;
+                // text-align: right;
+                margin: 15px;
+                li{
+                    list-style: none;
+                    display: inline-block;
+                    margin: 10px;
+                    a{
+                        color: $fC-1;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+    .box{
+        width: 300px;
+        // height: 150px;
+        // padding: 10px;
+        color: $fC-1;
+        background: $cartBg;
+        .image{
+            text-align: center;
+            padding-top: 10px;
+            img{
+                width: 220px;
+            }
+        }
+        .detail{
+            background: descClr;
+            .title{
+                @include fontStyle(1.5rem);
+            }
+            .desc{
+                @include fontStyle(0.5rem);
+            }
+            margin: 10px;
+        }
+        .set-quan{
+            padding: 10px 0;
+            background: $menuBg;
+            display: flex;
+            flex-basis: 100%;
+            .quantaty{
+                width: 70%;
+                margin-left: 10%;
+                @include fontStyle(2rem);
+            }
+            .btns{
+                width: 30%;
+                .btn{
+                    background: $cartBg;
+                    color: $fC-1;
+                    border: none;
+                    @include fontStyle(2rem);
+                    margin-right: 5px;
+                    padding: 0 10px;
+                }
+            }
+        }
+        .price{
+
+        }
+    }
+}
