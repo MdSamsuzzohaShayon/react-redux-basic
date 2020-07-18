@@ -1,0 +1,37 @@
+@mixin fontStyle(){
+    color: rgb(231, 129, 231);
+    font-size: 3rem;
+}
+
+@mixin flexProp(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.Count{
+    // text-align: center;
+    // width: 100%;
+    margin-left: 30%;
+    // height: 100%;
+    // overflow: hidden;
+    .elmt{
+        @include flexProp();
+        width: 500px;
+        height: 500px;
+        // width: 100%;
+        background: rgb(32, 1, 41);
+        .btn{
+            @include fontStyle();
+            background: rgb(78, 47, 68);
+            padding: 10px 20px;
+            margin: 20px;
+            border: none;
+        }
+        .value{
+            @include fontStyle();
+        }
+    }
+}
+

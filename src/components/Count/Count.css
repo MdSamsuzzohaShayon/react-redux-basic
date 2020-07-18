@@ -1,0 +1,26 @@
+.Count {
+  margin-left: 30%;
+}
+.Count .elmt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 500px;
+  height: 500px;
+  background: #200129;
+}
+.Count .elmt .btn {
+  color: #e781e7;
+  font-size: 3rem;
+  background: #4e2f44;
+  padding: 10px 20px;
+  margin: 20px;
+  border: none;
+}
+.Count .elmt .value {
+  color: #e781e7;
+  font-size: 3rem;
+}
+
+/*# sourceMappingURL=Count.css.map */
