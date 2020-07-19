@@ -29,6 +29,14 @@
   color: #a9f2ff;
   text-decoration: none;
 }
+.Cart .menu .items ul .circle {
+  width: 10px;
+  height: 5px;
+  padding: 5px 10px;
+  border-radius: 45%;
+  color: #03343d;
+  background: #a9f2ff;
+}
 .Cart .box {
   width: 300px;
   color: #a9f2ff;
@@ -62,7 +70,7 @@
 .Cart .box .set-quan .quantaty {
   width: 70%;
   margin-left: 10%;
-  font-size: 2rem;
+  font-size: 1rem;
   color: #a9f2ff;
 }
 .Cart .box .set-quan .btns {
@@ -76,6 +84,33 @@
   color: #a9f2ff;
   margin-right: 5px;
   padding: 0 10px;
+}
+.Cart .box .price .coupon input {
+  background: #065968;
+  border: none;
+  font-size: 0.8rem;
+  color: #a9f2ff;
+  padding: 4px 0;
+}
+.Cart .box .price .coupon input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #a9f2ff;
+  opacity: 0.5;
+  /* Firefox */
+}
+.Cart .box .add .btn {
+  margin: 10px;
+  background: #03343d;
+  color: #a9f2ff;
+  border: none;
+  font-size: 1rem;
+  color: #a9f2ff;
+  margin-right: 5px;
+  padding: 0 10px;
+  padding: 10px;
+}
+.Cart .box .set-bg {
+  background: #065968;
 }
 
 /*# sourceMappingURL=Cart.css.map */
