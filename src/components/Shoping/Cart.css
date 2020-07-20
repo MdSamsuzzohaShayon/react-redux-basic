@@ -5,6 +5,12 @@
 
 .Cart {
   text-align: left;
+  width: 100%;
+  height: 100vh;
+  background-image: url(/img/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .Cart .menu {
   width: 100%;
@@ -38,6 +44,7 @@
   background: #a9f2ff;
 }
 .Cart .box {
+  margin-left: 40%;
   width: 300px;
   color: #a9f2ff;
   background: #03343d;
