@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from "react-redux";
-import { buyCake } from '../redux/index';
+import { buyIceCream } from '../redux/index';
 import Button from 'react-bootstrap/Button';
 import { Container, Badge } from "react-bootstrap";
 
-function CakeContainer(props) {
+function IceCreamContainer(props) {
     return (
         <div>
             <br />
@@ -12,10 +12,10 @@ function CakeContainer(props) {
             <br />
             <Container >
                 <Badge>
-                    <h3>Number of cakes - {props.numOfCake}</h3>
+                    <h3>Number of Ice Cream - {props.numOfIceCream}</h3>
                 </Badge>
                 <br/>
-                <Button variant="primary" onClick={props.buyCake} >Buy Cake</Button>
+                <Button variant="primary" onClick={props.buyIceCream} >Buy Ice Cream</Button>
             </Container>
         </div>
     )
@@ -29,7 +29,7 @@ function CakeContainer(props) {
 // FOR UPDATING PROPS 
 const mapStateToProps = state => {
     return {
-        numOfCake: state.cake.numOfCake
+        numOfIceCream: state.iceCream.numOfIceCream
     }
 }
 
@@ -40,11 +40,11 @@ const mapStateToProps = state => {
 // FOR ON CLICK FUNCTION    
 const mapDispatchToPaops = dispatch => {
     return {
-        buyCake: () => dispatch(buyCake())
+        buyIceCream: () => dispatch(buyIceCream())
     }
 }
 
 export default connect(
     mapStateToProps,
     mapDispatchToPaops
-)(CakeContainer);
+)(IceCreamContainer);
