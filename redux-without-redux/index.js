@@ -1,7 +1,7 @@
 // USING REDUX WITHOUR REACT
 
 const redux = require('redux');
-const reduxLogger = require('redux-logger');
+const reduxLogger = require('redux-logger'); // THIS HELPS TO LOG ESSENTIAL INFO
 const logger = reduxLogger.createLogger();
 
 const applyMiddleware = redux.applyMiddleware;

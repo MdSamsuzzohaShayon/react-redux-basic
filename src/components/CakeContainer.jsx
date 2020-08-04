@@ -38,7 +38,7 @@ const mapStateToProps = state => {
 
 // DISPATCH ACTION CREATER FROM  REDUX
 // FOR ON CLICK FUNCTION    
-const mapDispatchToPaops = dispatch => {
+const mapDispatchToProps = dispatch => {
     return {
         buyCake: () => dispatch(buyCake())
     }
@@ -46,5 +46,5 @@ const mapDispatchToPaops = dispatch => {
 
 export default connect(
     mapStateToProps,
-    mapDispatchToPaops
+    mapDispatchToProps
 )(CakeContainer);
